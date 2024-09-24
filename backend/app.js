@@ -6,6 +6,7 @@ const morgan = require("morgan");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
 
+//
 // Import Router
 const authRouter = require("./routes/auth.route.js");
 const categoryRouter = require("./routes/categories.route.js");
