@@ -4,10 +4,10 @@ import { HomeContext } from "./index";
 
 const ProductCategory = (props) => {
   const images = [
-    "./image/lavender.jpg",
-    "./image/hatcafe.png",
-    "./image/hoanhai.jpg",
-    "./image/que.jpg",
+    "./image/about-01.jpg",
+    "./image/about-02.jpg",
+    "./image/gallery-03.jpg",
+    "./image/gallery-02.jpg",
   ];
   const { data, dispatch } = useContext(HomeContext);
 

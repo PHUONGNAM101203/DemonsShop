@@ -72,7 +72,7 @@ const sendEmailNotify = async (req, res) => {
     });
 
     const info = await transporter.sendMail({
-      from: '"Your order has been successfully placed" <aromaticbag.business@gmail.com>', // sender address
+      from: '"Your order has been successfully placed" <namhlpde170555@fpt.edu.vn>', // sender address
       to: email, // list of receivers
       subject: "Order Confirmation", // Subject line
       text: "Your order has been placed successfully.", // plain text body

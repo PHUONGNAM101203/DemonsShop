@@ -3,6 +3,7 @@ const {
   allUser,
   postSignin,
   postSignup,
+  isShopOwnerAuth,
 } = require("../controller/auth.controller.js");
 const express = require("express");
 const router = express.Router();
@@ -14,6 +15,7 @@ const {
 } = require("../middleware/auth.middleware.js");
 
 router.post("/isadmin", isAdminAuth);
+router.post("/isshopowner", isShopOwnerAuth);
 router.post("/signup", postSignup);
 router.post("/signin", postSignin);
 router.post("/user", loginCheck, isAuth, isAdmin, allUser);

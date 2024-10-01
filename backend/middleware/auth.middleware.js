@@ -2,6 +2,7 @@ const jwt = require("jsonwebtoken");
 const { JWT_SECRET } = require("../config/keys");
 const userModel = require("../models/users.model");
 
+// Check if user is logged in
 exports.loginCheck = (req, res, next) => {
   try {
     let token = req.headers.token;
@@ -16,6 +17,7 @@ exports.loginCheck = (req, res, next) => {
   }
 };
 
+// Check if the logged-in user matches the request user
 exports.isAuth = (req, res, next) => {
   let { loggedInUserId } = req.body;
   if (
@@ -23,20 +25,33 @@ exports.isAuth = (req, res, next) => {
     !req.userDetails._id ||
     loggedInUserId != req.userDetails._id
   ) {
-    res.status(403).json({ error: "You are not authenticate" });
+    return res.status(403).json({ error: "You are not authenticated" });
   }
   next();
 };
 
+// Check if the user is an Admin
 exports.isAdmin = async (req, res, next) => {
   try {
     let reqUser = await userModel.findById(req.body.loggedInUserId);
-    // If user role 0 that's mean not admin it's customer
-    if (reqUser.userRole === 0) {
-      res.status(403).json({ error: "Access denied" });
+    if (reqUser.userRole !== 1) {
+      return res.status(403).json({ error: "Access denied. Admin only." });
     }
     next();
-  } catch {
-    res.status(404);
+  } catch (err) {
+    res.status(404).json({ error: "User not found" });
+  }
+};
+
+// Check if the user is a ShopOwner
+exports.isShopOwner = async (req, res, next) => {
+  try {
+    let reqUser = await userModel.findById(req.body.loggedInUserId);
+    if (reqUser.userRole !== 2) {
+      return res.status(403).json({ error: "Access denied. Shop owner only." });
+    }
+    next();
+  } catch (err) {
+    res.status(404).json({ error: "User not found" });
   }
 };

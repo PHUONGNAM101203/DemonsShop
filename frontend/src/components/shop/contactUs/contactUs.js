@@ -781,7 +781,7 @@ const ContactUs = (props) => {
             </svg>
             <form onSubmit={handleSendEmail}>
               <h1 className="title text-center mb-4">
-                Enter your email to receive event notification
+                Enter your email to receive shop information
               </h1>
 
               <div className="form-group position-relative">

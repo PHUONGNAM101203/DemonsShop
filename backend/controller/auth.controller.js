@@ -4,13 +4,28 @@ const userModel = require("../models/users.model");
 const jwt = require("jsonwebtoken");
 const { JWT_SECRET } = require("../config/keys");
 
+// Check if user is Admin
 exports.isAdminAuth = async (req, res) => {
   let { loggedInUserId } = req.body;
   try {
     let loggedInUserRole = await userModel.findById(loggedInUserId);
     res.json({ role: loggedInUserRole.userRole });
   } catch {
-    res.status(404);
+    res.status(404).json({ error: "User not found" });
+  }
+};
+// Check if user is a Shop Owner
+exports.isShopOwnerAuth = async (req, res) => {
+  let { loggedInUserId } = req.body;
+  try {
+    let loggedInUserRole = await userModel.findById(loggedInUserId);
+    if (loggedInUserRole.userRole === 2) {
+      return res.json({ isShopOwner: true });
+    } else {
+      return res.json({ isShopOwner: false });
+    }
+  } catch (err) {
+    res.status(404).json({ error: "User not found" });
   }
 };
 
