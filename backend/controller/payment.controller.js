@@ -106,10 +106,10 @@ const sendEmailNotify = async (req, res) => {
           </p>
           <p style="font-size: 16px; color: #333;">If you have any questions, feel free to contact our support team.</p>
           <p style="font-size: 16px; color: #333;">Thank you for shopping with us!</p>
-          <p style="font-size: 16px; color: #333;">Best regards,<br>Aromatic Bag Team</p>
+          <p style="font-size: 16px; color: #333;">Best regards,<br>Demons Team</p>
           <div style="text-align: center; padding-top: 20px; border-top: 1px solid #e0e0e0; margin-top: 20px;">
-            <p style="font-size: 14px; color: #999;">Aromatic Bag, FPT Urban Area, Ngu Hanh Son, Da Nang</p>
-            <p style="font-size: 14px; color: #999;">Email: aromaticbag.business@gmail.com | Phone: 0336951009</p>
+            <p style="font-size: 14px; color: #999;">Demons, FPT Urban Area, Ngu Hanh Son, Da Nang</p>
+            <p style="font-size: 14px; color: #999;">Email: namhlpde170555@fpt.edu.vn | Zalo: 0775420232</p>
           </div>
         </div>
       `, // html body

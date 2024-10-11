@@ -27,9 +27,9 @@ const IntroduceAboutShop = (props) => {
                 ></img>
               </div>
               <div className="item-about-shop-content ">
-                <h6 className="item-about-shoh6-header">𝐍𝐚𝐭𝐮𝐫𝐚𝐥 𝐢𝐧𝐠𝐫𝐞𝐝𝐢𝐞𝐧𝐭𝐬</h6>
+                <h6 className="item-about-shoh6-header">𝑅𝑒𝑙𝑖𝑎𝑏𝑙𝑒 𝑆𝑜𝑢𝑟𝑐𝑖𝑛𝑔 𝑜𝑓 𝑆𝑒𝑐𝑜𝑛𝑑-ℎ𝑎𝑛𝑑 𝐶𝑙𝑜𝑡ℎ𝑖𝑛𝑔</h6>
                 <p className="item-about-shop-header">
-                  𝐼𝑛𝑔𝑟𝑒𝑑𝑖𝑒𝑛𝑡𝑠 100% 𝑛𝑎𝑡𝑢𝑟𝑎𝑙
+                Every piece is carefully inspected and selected to ensure the highest quality
                 </p>
               </div>
             </div>
@@ -42,10 +42,10 @@ const IntroduceAboutShop = (props) => {
                 ></img>
               </div>
               <div className="item-about-shop-content  ">
-                <h6 className="item-about-shoh6-header">𝐄𝐱𝐜𝐞𝐩𝐭𝐢𝐨𝐧𝐚𝐥 𝐪𝐮𝐚𝐥𝐢𝐭𝐲</h6>
+                <h6 className="item-about-shoh6-header">𝐄𝐱𝐜𝐞𝐩𝐭𝐢𝐨𝐧𝐚𝐥 𝐐𝐮𝐚𝐥𝐢𝐭𝐲</h6>
                 <p className="item-about-shop-header">
-                  𝑃𝑟𝑜𝑣𝑖𝑑𝑖𝑛𝑔 𝑜𝑢𝑡𝑠𝑡𝑎𝑛𝑑𝑖𝑛𝑔 𝑞𝑢𝑎𝑙𝑖𝑡𝑦 <br />
-                  𝑐𝑜𝑚𝑝𝑎𝑟𝑒𝑑 𝑡𝑜 𝑝𝑟𝑜𝑑𝑢𝑐𝑡 𝑝𝑟𝑖𝑐𝑒
+                Ensuring each product is in perfect condition with <br />
+                affordable and reasonable pricing
                 </p>
               </div>
             </div>
@@ -58,10 +58,10 @@ const IntroduceAboutShop = (props) => {
                 ></img>
               </div>
               <div className="item-about-shop-content ">
-                <h6 className="item-about-shoh6-header">𝐃𝐢𝐯𝐞𝐫𝐬𝐞 𝐬𝐜𝐞𝐧𝐭𝐬</h6>
+                <h6 className="item-about-shoh6-header">𝐃𝐢𝐯𝐞𝐫𝐬𝐞 𝐒𝐭𝐲𝐥𝐞𝐬</h6>
                 <p className="item-about-shop-header">
-                  𝑀𝑎𝑑𝑒 𝑓𝑟𝑜𝑚 𝑛𝑎𝑡𝑢𝑟𝑎𝑙 𝑖𝑛𝑔𝑟𝑒𝑑𝑖𝑒𝑛𝑡𝑠: <br />
-                  𝑗𝑎𝑠𝑚𝑖𝑛𝑒, 𝑙𝑎𝑣𝑒𝑛𝑑𝑒𝑟...
+                A blend of vintage and modern, offering various styles <br />
+                from well-known brands
                 </p>
               </div>
             </div>
