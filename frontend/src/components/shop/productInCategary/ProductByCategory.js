@@ -17,7 +17,7 @@ const Submenu = ({ category }) => {
               className="hover:text-yellow-700 cursor-pointer"
               onClick={(e) => history.push("/productInCatogory")}
             >
-              Shop 
+              Cửa hàng 
             </span>
             <span className="text-yellow-700 cursor-default">{category}</span>
           </div>
@@ -114,7 +114,7 @@ const AllProduct = ({ products }) => {
           <div className="col-span-2 md:col-span-3 lg:col-span-4 flex items-center justify-center text-2xl">
             <div className="flex flex-col items-center justify-center">
               <img className="w-75" src="../../image/NoFoundProductInWishlist.gif" alt="Girl in a jacket"></img>
-              No product found 
+              Không tìm thấy sản phẩm 
             </div>
           </div>
         )}

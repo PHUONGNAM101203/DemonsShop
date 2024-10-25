@@ -109,14 +109,14 @@ const AllProduct = (props) => {
                   colSpan="10"
                   className="text-xl text-center font-semibold py-8"
                 >
-                  No product found
+                  Không tìm thấy sản phẩm nào
                 </td>
               </tr>
             )}
           </tbody>
         </table>
         <div className="text-sm text-gray-600 mt-2">
-          Total {products && products.length} product found
+        Tổng cộng {products && products.length} sản phẩm được tìm thấy
         </div>
       </div>
     </Fragment>

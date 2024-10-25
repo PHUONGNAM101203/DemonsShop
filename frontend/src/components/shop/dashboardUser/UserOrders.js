@@ -10,14 +10,14 @@ const TableHeader = () => {
     <Fragment>
       <thead>
         <tr>
-          <th className="px-4 py-2 border">Products</th>
-          <th className="px-4 py-2 border">Status</th>
-          <th className="px-4 py-2 border">Total</th>
-          <th className="px-4 py-2 border">Phone</th>
-          <th className="px-4 py-2 border">Address</th>
+          <th className="px-4 py-2 border">Sản phẩm</th>
+          <th className="px-4 py-2 border">Trạng thái</th>
+          <th className="px-4 py-2 border">Tổng</th>
+          <th className="px-4 py-2 border">Số điện thoại</th>
+          <th className="px-4 py-2 border">Địa chỉ</th>
           <th className="px-4 py-2 border">Transaction Id</th>
-          <th className="px-4 py-2 border">Checkout</th>
-          <th className="px-4 py-2 border">Processing</th>
+          <th className="px-4 py-2 border">Thanh toán</th>
+          <th className="px-4 py-2 border">Xử lý</th>
         </tr>
       </thead>
     </Fragment>

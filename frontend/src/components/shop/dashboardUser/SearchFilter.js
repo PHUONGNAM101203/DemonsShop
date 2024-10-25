@@ -20,7 +20,7 @@ const SearchFilter = (props) => {
             </svg>
           </span>
           <input
-            placeholder="Find orders..."
+            placeholder="Tìm kiếm đơn hàng..."
             className="w-full py-2 px-2 focus:outline-none"
             type="text"
           />

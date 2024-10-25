@@ -13,6 +13,7 @@ export const CheckoutComponent = (props) => {
   const { data, dispatch } = useContext(LayoutContext);
 
   const [state, setState] = useState({
+    name:"",
     address: "",
     phone: "",
     error: false,
@@ -70,8 +71,27 @@ export const CheckoutComponent = (props) => {
                     ""
                   )}
                   <div className="flex flex-col py-2">
+                    <label htmlFor="name" className="pb-2">
+                      Tên khách hàng
+                    </label>
+                    <input
+                      value={state.name}
+                      onChange={(e) =>
+                        setState({
+                          ...state,
+                          name: e.target.value,
+                          error: false,
+                        })
+                      }
+                      type="text"
+                      id="name"
+                      className="border px-4 py-2"
+                      placeholder="Name"
+                    />
+                  </div>
+                  <div className="flex flex-col py-2">
                     <label htmlFor="address" className="pb-2">
-                      Dalivery Address
+                      Địa chỉ
                     </label>
                     <input
                       value={state.address}
@@ -90,7 +110,7 @@ export const CheckoutComponent = (props) => {
                   </div>
                   <div className="flex flex-col py-2 mb-2">
                     <label htmlFor="phone" className="pb-2">
-                      Phone
+                      Sđt
                     </label>
                     <input
                       value={state.phone}
@@ -115,7 +135,7 @@ export const CheckoutComponent = (props) => {
                     className="w-full px-4 py-2 text-center text-white font-semibold cursor-pointer"
                     style={{ background: "#303031" }}
                   >
-                    Pay now
+                    Mua ngay
                   </div>
                 </div>
               </Fragment>

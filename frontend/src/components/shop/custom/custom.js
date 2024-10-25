@@ -68,152 +68,141 @@ const Custom = (props) => {
 
   return (
     <Fragment>
-      <div className="mt-28">
-        <div className="custom m-6">
-          <h3 className="header-custom mr-4 ml-4">Become Shop Owner</h3>
-          <div className="sub-title-custom mr-4 ml-4">
-            Please fill in your details below to proceed.
-          </div>
-          <div className="content-custom m-4 md:mx-8 md:my-6 grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="content-custom-item rounded-lg shadow p-4 border m-1">
-              <label htmlFor="fullName" className="block mb-2">
-                Full Name
-              </label>
+      <div className="min-h-screen flex items-center justify-center bg-gray-100">
+        <div className="w-full max-w-4xl p-8 bg-white shadow-lg rounded-lg">
+          <h3 className="text-3xl text-center mb-6">Đăng kí trở thành shop </h3>
+          <p className="text-center text-gray-600 mb-6">Vui lòng điền thông tin chi tiết của bạn bên dưới để tiếp tục.</p>
+          
+          {/* Form content */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label htmlFor="fullName" className="block mb-2 text-lg font-medium">Tên Shop</label>
               <input
                 type="text"
                 id="fullName"
-                className="form-control form-control-lg thick shadow-sm w-full p-2"
+                className="form-control w-full p-3 border border-gray-300 rounded"
                 value={formData.fullName}
                 onChange={handleChange}
-                placeholder="Enter your full name"
+                placeholder="Nhập tên shop của bạn"
               />
             </div>
-            <div className="content-custom-item rounded-lg shadow p-4 border m-1">
-              <label htmlFor="email" className="block mb-2">
-                Email Address
-              </label>
+            <div>
+              <label htmlFor="email" className="block mb-2 text-lg font-medium">Email</label>
               <input
                 type="email"
                 id="email"
-                className="form-control form-control-lg thick shadow-sm w-full p-2"
+                className="form-control w-full p-3 border border-gray-300 rounded"
                 value={formData.email}
                 onChange={handleChange}
-                placeholder="Enter your email address"
+                placeholder="Nhập email của bạn"
               />
             </div>
-            <div className="content-custom-item rounded-lg shadow p-4 border m-1">
-              <label htmlFor="phone" className="block mb-2">
-                Zalo
-              </label>
+            <div>
+              <label htmlFor="phone" className="block mb-2 text-lg font-medium">Zalo</label>
               <input
                 type="tel"
                 id="phone"
-                className="form-control form-control-lg thick shadow-sm w-full p-2"
+                className="form-control w-full p-3 border border-gray-300 rounded"
                 value={formData.phone}
                 onChange={handleChange}
-                placeholder="Enter your phone number"
+                placeholder="Nhập số zalo của bạn"
               />
             </div>
-            <div className="content-custom-item rounded-lg shadow p-4 border m-1">
-              <label htmlFor="address" className="block mb-2">
-                Address
-              </label>
+            <div>
+              <label htmlFor="address" className="block mb-2 text-lg font-medium">Địa chỉ</label>
               <input
                 type="text"
                 id="address"
-                className="form-control form-control-lg thick shadow-sm w-full p-2"
+                className="form-control w-full p-3 border border-gray-300 rounded"
                 value={formData.address}
                 onChange={handleChange}
-                placeholder="Enter your address"
+                placeholder="Nhập địa chỉ của bạn"
               />
             </div>
           </div>
-        
-          <div className="sub-title-custom m-4 text-center">
+
+          <div className="mt-6 text-center">
             <button
               type="button"
-              className="btn btn-success"
+              className="px-6 py-3 bg-yellow-600 text-white text-lg rounded-lg shadow-lg hover:bg-yellow-700"
               onClick={handleSubmit}
             >
-              Submit
+              Gửi
             </button>
           </div>
-
-          {/* Chỉ hiển thị bảng comments nếu là admin */}
-          {isAdmin() && (
-            <div className="submitted-comments mt-6">
-              <h4 className="mr-4 ml-4">Submitted Comments:</h4>
-              {comments.length > 0 ? (
-                <div className="table-responsive">
-                  <table className="table table-bordered">
-                    <thead>
-                      <tr>
-                        <th>#</th>
-                        <th>Full Name</th>
-                        <th>Email</th>
-                        <th>Phone</th>
-                        <th>Address</th>
-                        <th>Status</th>
-                        <th>Action</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {comments.map((comment, index) => (
-                        <tr key={index}>
-                          <td>{index + 1}</td>
-                          <td>{comment.fullName}</td>
-                          <td>{comment.email}</td>
-                          <td>{comment.phone}</td>
-                          <td>{comment.address}</td>
-                          <td>{comment.status}</td>
-                          <td>
-                            {comment.status === "pending" && (
-                              <button
-                                className="btn btn-primary"
-                                onClick={() => handleApprove(index)}
-                              >
-                                Approve
-                              </button>
-                            )}
-                            <button
-                              className="btn btn-danger ml-2"
-                              onClick={() => handleDelete(index)}
-                            >
-                              Delete
-                            </button>
-                          </td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              ) : (
-                <p className="mr-4 ml-4">No comments submitted yet.</p>
-              )}
-            </div>
-          )}
-
-          {/* Thông báo khi tài khoản User xem lại */}
-          {!isAdmin() && (
-            <div className="user-notification mt-6">
-              <h4>Your Submission Status</h4>
-              {comments.length > 0 && (
-                comments.map((comment, index) => (
-                  <div key={index} className="my-2">
-                    {comment.status === "approved" ? (
-                      <p>Your submit to become shop owner is approval.
-                         We will contact you!
-                      </p>
-                    ) : (
-                      <p>Your submission is still pending approval</p>
-                    )}
-                  </div>
-                ))
-              )}
-            </div>
-          )}
         </div>
       </div>
+
+      {/* Comments section */}
+      {isAdmin() && (
+        <div className="mt-8 max-w-4xl mx-auto p-4 bg-white rounded-lg shadow-lg">
+          <h4 className="text-2xl mb-4">Bảng danh sách đăng kí thành shop</h4>
+          {comments.length > 0 ? (
+            <div className="overflow-x-auto">
+              <table className="min-w-full table-auto bg-white shadow-lg rounded">
+                <thead className="bg-gray-200">
+                  <tr>
+                    <th className="px-4 py-2">#</th>
+                    <th className="px-4 py-2">Tên shop</th>
+                    <th className="px-4 py-2">Email</th>
+                    <th className="px-4 py-2">Zalo</th>
+                    <th className="px-4 py-2">Địa chỉ</th>
+                    <th className="px-4 py-2">Trạng thái</th>
+                    <th className="px-4 py-2">Thao tác</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {comments.map((comment, index) => (
+                    <tr key={index} className="border-t">
+                      <td className="px-4 py-2">{index + 1}</td>
+                      <td className="px-4 py-2">{comment.fullName}</td>
+                      <td className="px-4 py-2">{comment.email}</td>
+                      <td className="px-4 py-2">{comment.phone}</td>
+                      <td className="px-4 py-2">{comment.address}</td>
+                      <td className="px-4 py-2">{comment.status}</td>
+                      <td className="px-4 py-2">
+                        {comment.status === "pending" && (
+                          <button
+                            className="px-4 py-2 bg-blue-500 text-white rounded"
+                            onClick={() => handleApprove(index)}
+                          >
+                            Đồng ý
+                          </button>
+                        )}
+                        <button
+                          className="ml-2 px-4 py-2 bg-red-500 text-white rounded"
+                          onClick={() => handleDelete(index)}
+                        >
+                          Xóa
+                        </button>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          ) : (
+            <p>Không có đơn đăng kí nào</p>
+          )}
+        </div>
+      )}
+
+      {!isAdmin() && (
+        <div className="mt-8 max-w-4xl mx-auto p-4 bg-white rounded-lg shadow-lg">
+          <h4>Trạng thái đăng kí của bạn</h4>
+          {comments.length > 0 && (
+            comments.map((comment, index) => (
+              <div key={index} className="my-2">
+                {comment.status === "approved" ? (
+                  <p>Việc gửi đơn đăng ký trở thành shop của bạn đã được phê duyệt. Chúng tôi sẽ liên lạc với bạn!</p>
+                ) : (
+                  <p>Nội dung đăng kí của bạn vẫn đang chờ phê duyệt.</p>
+                )}
+              </div>
+            ))
+          )}
+        </div>
+      )}
     </Fragment>
   );
 };

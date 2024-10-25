@@ -92,7 +92,7 @@ const ProductDetailsSection = (props) => {
       </div>
     );
   } else if (!sProduct) {
-    return <div>No product</div>;
+    return <div>Không có sản phẩm</div>;
   }
   return (
     <Fragment>
@@ -220,7 +220,7 @@ const ProductDetailsSection = (props) => {
             </div>
             <div className="my-4 md:my-6">
               {+quantitiy === +sProduct.pQuantity ? (
-                <span className="text-xs text-red-500">Stock limited</span>
+                <span className="text-xs text-red-500">Quá số lượng</span>
               ) : (
                 ""
               )}
@@ -234,7 +234,7 @@ const ProductDetailsSection = (props) => {
                     quantitiy === sProduct.pQuantity && "text-red-500"
                   }`}
                 >
-                  Quantity
+                  Số lượng
                 </div>
                 {/* Quantity Button */}
                 {sProduct.pQuantity !== 0 ? (
@@ -388,7 +388,8 @@ const ProductDetailsSection = (props) => {
                       style={{ background: "#303031" }}
                       className={`px-4 py-2 text-white text-center cursor-pointer uppercase`}
                     >
-                      Add to cart
+                      Thêm giỏ hàng
+
                     </div>
                   )}
                 </Fragment>
@@ -408,7 +409,7 @@ const ProductDetailsSection = (props) => {
                       disabled={true}
                       className="px-4 py-2 text-white opacity-50 cursor-not-allowed text-center uppercase"
                     >
-                      Out of stock
+                      Hết hàng
                     </div>
                   )}
                 </Fragment>

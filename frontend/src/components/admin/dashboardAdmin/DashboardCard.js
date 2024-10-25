@@ -34,7 +34,7 @@ const DashboardCard = (props) => {
           <div className="text-2xl font-semibold">
             {data ? data.totalData.Users : 0}
           </div>
-          <div className="text-lg font-medium">Customers</div>
+          <div className="text-lg font-medium">Khách hàng</div>
           <div className="flex items-center space-x-1 text-green-500">
             <span>7%</span>
             <span>
@@ -75,7 +75,7 @@ const DashboardCard = (props) => {
           <div className="text-2xl font-semibold">
             {data ? data.totalData.Orders : 0}
           </div>
-          <div className="text-lg font-medium">Orders</div>
+          <div className="text-lg font-medium">Đơn đặt hàng</div>
           <div className="flex items-center space-x-1 text-green-500">
             <span>10%</span>
             <span>
@@ -114,7 +114,7 @@ const DashboardCard = (props) => {
           <div className="text-2xl font-semibold">
             {data ? data.totalData.Products : 0}
           </div>
-          <div className="text-lg font-medium">Product</div>
+          <div className="text-lg font-medium">Sản phẩm</div>
         </div>
         <div className="flex flex-col justify-center items-center col-span-1 bg-white p-6 shadow-lg hover:shadow-none cursor-pointer transition-all duration-300 ease-in border-b-4 border-opacity-0 hover:border-opacity-100 border-orange-200">
           <div className="bg-orange-200 p-2 cursor-pointer rounded-full">

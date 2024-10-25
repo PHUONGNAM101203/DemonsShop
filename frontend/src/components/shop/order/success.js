@@ -72,17 +72,17 @@ export const PayoutSuccessComponent = (props) => {
           src="https://static.vecteezy.com/system/resources/previews/039/322/579/non_2x/young-women-use-smartphones-to-do-online-shopping-the-woman-makes-online-transactions-for-her-order-order-confirmation-concept-flat-illustration-vector.jpg"
           alt=""
         />
-        <h4 className="content-page-checkout">Your Payment is Successful</h4>
+        <h4 className="content-page-checkout">Thanh toán của bạn thành công</h4>
         <p className="subcontent-page-checkout">
-          Thank you for payment. An automated payment receipt will be sent to
-          your registered email
+        Cảm ơn bạn đã thanh toán. Biên nhận thanh toán tự động sẽ được gửi đến
+        email đã đăng ký của bạn
         </p>
         <button
           onClick={() => props.history.push("/")}
           className="page-checkout-button"
         >
           {" "}
-          Back to home
+          Trở về trang chủ
         </button>
       </div>
     </Fragment>

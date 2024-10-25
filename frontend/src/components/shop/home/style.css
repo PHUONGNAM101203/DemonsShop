@@ -56,3 +56,42 @@
 
 .select-curtom{
 }
+.about-us-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.about-us-container {
+  max-width: 600px;
+}
+
+.about-us-container h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.about-us-container p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  color: #666;
+}
+
+.btn-contact {
+  display: inline-block;
+  background-color: #b7791f; /* Màu giống với slider thumb */
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+.btn-contact:hover {
+  background-color: #8f5e18; /* Màu hover cho button */
+}
+

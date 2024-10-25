@@ -70,7 +70,7 @@ const Slider = (props) => {
                 style={{ background: "#303031" }}
                 className="cursor-pointer box-border text-2xl text-black px-4 py-2 rounded bg-white opacity-75"
               >
-                Shop Now
+                Mua ngay
               </a>
             </div>
           </>

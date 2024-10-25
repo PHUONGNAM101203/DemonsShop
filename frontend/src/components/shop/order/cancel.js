@@ -9,9 +9,9 @@ export const CancelComponent = (props) => {
           src="https://cdni.iconscout.com/illustration/premium/thumb/payment-failed-5795926-4841583.png"
           alt=""
         />
-        <h4 className="content-page-checkout">Your Payment is Unuccessful</h4>
+        <h4 className="content-page-checkout">Thanh toán của bạn không thành công</h4>
         <p className="subcontent-page-checkout">
-          Payment failed. Please click Back to home to return to the home page.
+        Thanh toán không thành công. Vui lòng nhấn Back to home để quay lại trang chủ.
         </p>
         <a href="http://localhost:3000/">
           <button
@@ -19,7 +19,7 @@ export const CancelComponent = (props) => {
             className="page-checkout-button"
           >
             {" "}
-            Back to home
+            Trở về trang chủ
           </button>
         </a>
       </div>

@@ -8,9 +8,9 @@ export const Alert = (color, text) => (
 
 export const reviewSubmitHanlder = (fData, setFdata, fetchData) => {
   if (!fData.rating || !fData.review) {
-    setFdata({ ...fData, error: "Rating and review must be required" });
+    setFdata({ ...fData, error: "Cần phải có đánh giá và đánh giá" });
   } else if (!isAuthenticate()) {
-    setFdata({ ...fData, error: "You must need login to review" });
+    setFdata({ ...fData, error: "Bạn cần phải đăng nhập để đánh giá" });
   } else {
     addReview(fData, setFdata, fetchData);
   }

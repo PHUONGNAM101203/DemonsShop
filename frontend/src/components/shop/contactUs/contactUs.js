@@ -781,7 +781,7 @@ const ContactUs = (props) => {
             </svg>
             <form onSubmit={handleSendEmail}>
               <h1 className="title text-center mb-4">
-                Enter your email to receive shop information
+                Nhập email của bạn để nhận mọi thông tin của cửa hàng 
               </h1>
 
               <div className="form-group position-relative">
@@ -799,7 +799,7 @@ const ContactUs = (props) => {
 
               <div className="text-center">
                 <button type="submit" className="btn btn-primary" tabIndex="-1">
-                  Send
+                   Gửi
                 </button>
               </div>
             </form>

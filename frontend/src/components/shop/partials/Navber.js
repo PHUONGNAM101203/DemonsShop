@@ -38,25 +38,25 @@ const Navber = (props) => {
               className="hover:bg-gray-200 px-4 py-3 rounded-lg font-light tracking-widest hover:text-gray-800 cursor-pointer"
               onClick={(e) => history.push("/")}
             >
-              Home
+              Trang chủ
             </span>
             <span
               className="hover:bg-gray-200 px-4 py-3 rounded-lg font-light tracking-widest hover:text-gray-800 cursor-pointer"
               onClick={(e) => history.push("/productInCatogory")}
             >
-              Product
+              Sản phẩm
             </span>
             <span
               className="hover:bg-gray-200 px-4 py-3 rounded-lg font-light tracking-widest hover:text-gray-800 cursor-pointer"
               onClick={(e) => history.push("/custom")}
             >
-               Shop
+               Cửa hàng
             </span>
             <span
               className="hover:bg-gray-200 px-4 py-3 rounded-lg font-light tracking-widest hover:text-gray-800 cursor-pointer"
               onClick={(e) => history.push("/contact-us")}
             >
-              Contact
+              Liên hệ
             </span>
           </div>
           <div className="col-span-2 lg:hidden flex justify-items-stretch	 items-center">
@@ -160,7 +160,7 @@ const Navber = (props) => {
                                 />
                               </svg>
                             </span>
-                            <span>My Orders</span>
+                            <span>Đơn hàng của tôi</span>
                           </span>
                           <span
                             onClick={(e) => history.push("/user/profile")}
@@ -182,7 +182,7 @@ const Navber = (props) => {
                                 />
                               </svg>
                             </span>
-                            <span>My Account</span>
+                            <span>Tài khoản của tôi</span>
                           </span>
                           <span
                             onClick={(e) => history.push("/wish-list")}
@@ -204,7 +204,7 @@ const Navber = (props) => {
                                 />
                               </svg>
                             </span>
-                            <span>My Wishlist</span>
+                            <span>List yêu thích</span>
                           </span>
                           <span
                             onClick={(e) => history.push("/user/setting")}
@@ -232,7 +232,7 @@ const Navber = (props) => {
                                 />
                               </svg>
                             </span>
-                            <span>Setting</span>
+                            <span>Cài đặt</span>
                           </span>
                           <span
                             onClick={(e) => logout()}
@@ -254,7 +254,7 @@ const Navber = (props) => {
                                 />
                               </svg>
                             </span>
-                            <span>Logout</span>
+                            <span>Đăng xuất</span>
                           </span>
                         </li>
                       </Fragment>
@@ -287,7 +287,7 @@ const Navber = (props) => {
                                 />
                               </svg>
                             </span>
-                            <span>Admin Panel</span>
+                            <span>Bảng quản trị</span>
                           </span>
                           <span
                             onClick={(e) => logout()}
@@ -309,7 +309,7 @@ const Navber = (props) => {
                                 />
                               </svg>
                             </span>
-                            <span>Logout</span>
+                            <span>Đăng xuất</span>
                           </span>
                         </li>
                       </Fragment>
@@ -378,7 +378,7 @@ const Navber = (props) => {
               className="font-medium text-lg tracking-widest hover:text-gray-800 hover:bg-gray-200 px-3 py-2 rounded-lg cursor-pointer"
               onClick={(e) => history.push("/")}
             >
-              Shop
+              Cửa hàng 
             </span>
             <span
               className="font-medium text-lg tracking-widest hover:text-gray-800 hover:bg-gray-200 px-3 py-2 rounded-lg cursor-pointer"
@@ -390,7 +390,7 @@ const Navber = (props) => {
               className="font-medium text-lg tracking-widest hover:text-gray-800 hover:bg-gray-200 px-3 py-2 rounded-lg cursor-pointer"
               onClick={(e) => history.push("/contact-us")}
             >
-              Contact us
+              Liên hệ
             </span>
           </div>
         </div>

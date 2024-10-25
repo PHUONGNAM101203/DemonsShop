@@ -40,7 +40,7 @@ const AdminNavber = (props) => {
             style={{ letterSpacing: "0.70rem" }}
             className="flex items-left text-center font-bold uppercase text-gray-800 text-2xl cursor-pointer px-2 text-center "
           >
-            Aromatic Bag
+            Demons Shop
           </span>
         </div>
         {/* Small Screen Show */}
@@ -65,7 +65,7 @@ const AdminNavber = (props) => {
             style={{ letterSpacing: "0.10rem" }}
             className="flex items-left text-center font-bold uppercase text-gray-800 text-2xl cursor-pointer px-2 text-center"
           >
-            Aromatic Bag
+           Demons Shop
           </span>
         </div>
         {/* Both Screen show */}
@@ -143,7 +143,7 @@ const AdminNavber = (props) => {
                       />
                     </svg>
                   </span>
-                  <span>Shop</span>
+                  <span>Cửa hàng</span>
                 </span>
                 <span className="flex space-x-1 py-2 px-8 hover:bg-gray-400 cursor-pointer">
                   <span>
@@ -168,7 +168,7 @@ const AdminNavber = (props) => {
                       />
                     </svg>
                   </span>
-                  <span>Setting</span>
+                  <span>Cài đặt</span>
                 </span>
                 <span
                   onClick={(e) => logout()}
@@ -190,7 +190,7 @@ const AdminNavber = (props) => {
                       />
                     </svg>
                   </span>
-                  <span>Logout</span>
+                  <span>Đăng xuất</span>
                 </span>
               </li>
             </div>
